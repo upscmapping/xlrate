@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XLRATE Corporate Consultancy LLP | OPC Registration & Business Services</title>
+    <meta name="description" content="XLRATE Corporate Consultancy LLP - Expert OPC registration, company formation, and compliance services in Jammu. CA, CS & Advocates team.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-green: #2E7D32;
+            --dark-green: #1B5E20;
+            --rocket-blue: #1565C0;
+            --accent-gold: #F9A825;
+            --text-dark: #263238;
+            --bg-light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            position: relative;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(46,125,50,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-title span {
+            color: var(--primary-green);
+            position: relative;
+        }
+        
+        .hero-title span::after {
+            content: '🚀';
+            position: absolute;
+            right: -40px;
+            top: -10px;
+            font-size: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-green);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(46,125,50,0.3);
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: var(--dark-green);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46,125,50,0.4);
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Services Cards */
+        .service-card {
+            border: none;
+            border-radius: 20px;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-green), var(--rocket-blue));
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-green), var(--rocket-blue));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Benefits Path */
+        .benefits-section {
+            background: var(--bg-light);
+            position: relative;
+        }
+        
+        .path-container {
+            position: relative;
+            padding: 40px 0;
+        }
+        
+        .benefit-node {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 2;
+            border-left: 4px solid var(--primary-green);
+            transition: all 0.3s;
+        }
+        
+        .benefit-node:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+        
+        /* Why Choose Us */
+        .feature-box {
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 20px;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(46,125,50,0.1), rgba(21,101,192,0.1));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: var(--primary-green);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--text-dark) 0%, #1a237e 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(46,125,50,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 40px;
+            height: 100%;
+        }
+        
+        .form-control-custom {
+            background: rgba(255,255,255,0.9);
+            border: none;
+            border-radius: 10px;
+            padding: 12px 20px;
+        }
+        
+        /* Navbar */
+        .navbar {
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.95) !important;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+        
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--primary-green) !important;
+            font-size: 1.5rem;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-dark) !important;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-green) !important;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 40px 0;
+        }
+        
+        /* Floating WhatsApp Button */
+        .float-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            z-index: 1000;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .float-whatsapp:hover {
+            transform: scale(1.1);
+            color: white;
+            background: #128C7E;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .hero-title span::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-rocket-takeoff-fill me-2"></i>XLRATE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <a href="https://wa.me/917780932614" class="btn btn-primary-custom ms-lg-3" target="_blank">
+                    <i class="bi bi-whatsapp me-2"></i>Chat Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100 pt-5">
+                <div class="col-lg-6">
+                    <div class="badge bg-success mb-3 px-3 py-2">
+                        <i class="bi bi-shield-check me-1"></i> Trusted by 500+ Businesses
+                    </div>
+                    <h1 class="hero-title">
+                        OPC Registration <span>Made Easy!</span>
+                    </h1>
+                    <p class="lead mb-4 fs-5 text-secondary">
+                        Start your own company as a single owner with complete control and legal benefits. 
+                        Expert guidance from Chartered Accountants, Company Secretaries & Advocates.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <a href="#contact" class="btn btn-primary-custom btn-lg">
+                            Get Started Today
+                        </a>
+                        <a href="https://wa.me/917780932614" class="btn btn-whatsapp btn-lg" target="_blank">
+                            <i class="bi bi-whatsapp"></i> WhatsApp Us
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-center gap-4 text-muted">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            <span>Fast Process</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            <span>Affordable</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            <span>Expert Team</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="position-relative">
+                        <div class="card border-0 shadow-lg rounded-4 p-4 bg-white">
+                            <div class="text-center mb-4">
+                                <div class="d-inline-block p-3 rounded-circle bg-success bg-opacity-10 mb-3">
+                                    <i class="bi bi-building-check display-4 text-success"></i>
+                                </div>
+                                <h4>What is OPC?</h4>
+                                <p class="text-muted">Allows a single individual to run a company with limited liability protection and a separate legal identity.</p>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="text-center p-3 rounded-3 bg-light">
+                                        <i class="bi bi-person-check fs-2 text-primary mb-2"></i>
+                                        <div class="small fw-bold">Single Owner</div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-center p-3 rounded-3 bg-light">
+                                        <i class="bi bi-shield-check fs-2 text-success mb-2"></i>
+                                        <div class="small fw-bold">Limited Liability</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Decorative elements -->
+                        <div class="position-absolute top-0 end-0 translate-middle-y bg-warning rounded-circle p-3 shadow" style="z-index: -1; opacity: 0.8;">
+                            <i class="bi bi-star-fill text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 my-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-success text-uppercase fw-bold mb-2">Our Services</h6>
+                <h2 class="display-5 fw-bold mb-3">Comprehensive Business Solutions</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 600px;">
+                    End-to-end services to establish and grow your business with legal compliance
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card p-4">
+                        <div class="service-icon">
+                            <i class="bi bi-building-add"></i>
+                        </div>
+                        <h4>OPC Registration</h4>
+                        <p class="text-muted mb-3">Complete One Person Company incorporation with ROC filing, drafting MOA/AOA, and Certificate of Incorporation.</p>
+                        <a href="#contact" class="text-success fw-bold text-decoration-none">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card p-4">
+                        <div class="service-icon">
+                            <i class="bi bi-file-earmark-person"></i>
+                        </div>
+                        <h4>DIN & DSC</h4>
+                        <p class="text-muted mb-3">Director Identification Number and Digital Signature Certificate procurement for seamless filing.</p>
+                        <a href="#contact" class="text-success fw-bold text-decoration-none">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card p-4">
+                        <div class="service-icon">
+                            <i class="bi bi-trademark"></i>
+                        </div>
+                        <h4>Name Approval & Doc</h4>
+                        <p class="text-muted mb-3">Strategic company name search, approval from MCA, and complete documentation preparation.</p>
+                        <a href="#contact" class="text-success fw-bold text-decoration-none">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card p-4">
+                        <div class="service-icon">
+                            <i class="bi bi-credit-card-2-front"></i>
+                        </div>
+                        <h4>PAN & TAN</h4>
+                        <p class="text-muted mb-3">Permanent Account Number and Tax Deduction Account Number application for your company.</p>
+                        <a href="#contact" class="text-success fw-bold text-decoration-none">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card p-4">
+                        <div class="service-icon">
+                            <i class="bi bi-bank"></i>
+                        </div>
+                        <h4>Bank Account Guidance</h4>
+                        <p class="text-muted mb-3">Assistance in opening current accounts, choosing the right bank, and completing KYC formalities.</p>
+                        <a href="#contact" class="text-success fw-bold text-decoration-none">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card p-4">
+                        <div class="service-icon">
+                            <i class="bi bi-clipboard-check"></i>
+                        </div>
+                        <h4>Compliance Support</h4>
+                        <p class="text-muted mb-3">Annual filing, GST registration, ITR filing, and ongoing legal compliance management.</p>
+                        <a href="#contact" class="text-success fw-bold text-decoration-none">Learn More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits-section py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-primary text-uppercase fw-bold mb-2">Why OPC?</h6>
+                <h2 class="display-5 fw-bold mb-3">Benefits of OPC Registration</h2>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="benefit-node text-center">
+                        <div class="benefit-icon"><i class="bi bi-person-workspace"></i></div>
+                        <h4>Full Control</h4>
+                        <p class="text-muted mb-0">Complete decision-making authority with single ownership structure</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-node text-center">
+                        <div class="benefit-icon"><i class="bi bi-shield-lock"></i></div>
+                        <h4>Personal Assets Safe</h4>
+                        <p class="text-muted mb-0">Limited liability protection separates personal and business assets</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-node text-center">
+                        <div class="benefit-icon"><i class="bi bi-person-badge"></i></div>
+                        <h4>Separate Legal Identity</h4>
+                        <p class="text-muted mb-0">Company is distinct from its owner in legal matters</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="benefit-node text-center">
+                        <div class="benefit-icon"><i class="bi bi-clipboard-minus"></i></div>
+                        <h4>Less Compliance</h4>
+                        <p class="text-muted mb-0">Fewer regulatory requirements compared to private limited</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="benefit-node text-center">
+                        <div class="benefit-icon"><i class="bi bi-hand-thumbs-up"></i></div>
+                        <h4>More Trust</h4>
+                        <p class="text-muted mb-0">Corporate structure builds better credibility with clients</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="benefit-node text-center">
+                        <div class="benefit-icon"><i class="bi bi-arrow-up-right-circle"></i></div>
+                        <h4>Easy to Convert</h4>
+                        <p class="text-muted mb-0">Seamless conversion to Pvt Ltd when business grows</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-5 my-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-warning text-uppercase fw-bold mb-2">Our Edge</h6>
+                <h2 class="display-5 fw-bold mb-3">Why Choose XLRATE?</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        </div>
+                        <h5>Fast</h5>
+                        <p class="text-muted mb-0">Quick turnaround time for all registrations and filings</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper">
+                            <i class="bi bi-cash-coin"></i>
+                        </div>
+                        <h5>Affordable</h5>
+                        <p class="text-muted mb-0">Competitive pricing with no hidden charges</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <h5>Expert</h5>
+                        <p class="text-muted mb-0">CA, CS & Advocates under one roof</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <h5>Support</h5>
+                        <p class="text-muted mb-0">End-to-end guidance even after registration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="position-relative">
+                        <div class="bg-success rounded-4 p-5 text-white">
+                            <h3 class="mb-4">Multidisciplinary Expertise</h3>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-check-circle-fill me-3 fs-4"></i>
+                                <span>Chartered Accountants (CA)</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-check-circle-fill me-3 fs-4"></i>
+                                <span>Company Secretaries (CS)</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-check-circle-fill me-3 fs-4"></i>
+                                <span>Legal Advocates</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill me-3 fs-4"></i>
+                                <span>Tax Consultants</span>
+                            </div>
+                        </div>
+                        <div class="position-absolute bottom-0 end-0 translate-middle-y bg-white p-3 rounded-4 shadow-lg" style="width: 200px;">
+                            <div class="text-center">
+                                <div class="display-4 fw-bold text-success">500+</div>
+                                <div class="text-muted">Clients Served</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h6 class="text-success text-uppercase fw-bold mb-2">About Us</h6>
+                    <h2 class="display-6 fw-bold mb-4">Your Trusted Partner for Corporate Excellence</h2>
+                    <p class="text-muted mb-4">
+                        XLRATE Corporate Consultancy LLP is a team of dedicated professionals committed to providing comprehensive business solutions. From startups to established enterprises, we provide end-to-end guidance spanning corporate, financial, and legal domains.
+                    </p>
+                    <p class="text-muted mb-4">
+                        Our integrated approach ensures consistent quality, timely delivery, and strategic alignment across all services you require. We prioritize your goals, offering tailored strategies and personalized attention.
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-geo-alt-fill text-success me-2"></i>
+                                <span>Gandhinagar, Jammu</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-envelope-fill text-success me-2"></i>
+                                <span>xlratecorp@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <h6 class="text-warning text-uppercase fw-bold mb-2">Get in Touch</h6>
+                    <h2 class="display-5 fw-bold mb-4">Start Your OPC Today!</h2>
+                    <p class="lead mb-5 opacity-75">
+                        Don't let complex legal and financial hurdles slow you down. Partner with XLRATE to unlock your business's full potential.
+                    </p>
+                    
+                    <div class="contact-card mb-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="flex-shrink-0 bg-success rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                <i class="bi bi-geo-alt-fill text-white"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0">Office Address</h6>
+                                <p class="mb-0 opacity-75">660-A, Gandhinagar, Jammu</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="flex-shrink-0 bg-success rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                <i class="bi bi-telephone-fill text-white"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0">Phone/WhatsApp</h6>
+                                <p class="mb-0 opacity-75">+91 77809 32614<br>+91 91034 99953</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0 bg-success rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                <i class="bi bi-envelope-fill text-white"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0">Email</h6>
+                                <p class="mb-0 opacity-75">xlratecorp@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/917780932614" class="btn btn-light btn-lg w-100" target="_blank">
+                        <i class="bi bi-whatsapp text-success me-2"></i> Chat on WhatsApp
+                    </a>
+                </div>
+                
+                <div class="col-lg-7">
+                    <div class="card border-0 rounded-4 shadow-lg">
+                        <div class="card-body p-5">
+                            <h3 class="mb-4 text-dark">Request a Callback</h3>
+                            <form id="contactForm" action="https://formspree.io/f/xrgwjjrn" method="POST">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-dark">Full Name</label>
+                                        <input type="text" name="name" class="form-control form-control-custom" required placeholder="Your name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-dark">Phone Number</label>
+                                        <input type="tel" name="phone" class="form-control form-control-custom" required placeholder="+91 98765 43210">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label text-dark">Email Address</label>
+                                        <input type="email" name="email" class="form-control form-control-custom" placeholder="you@example.com">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label text-dark">Service Required</label>
+                                        <select name="service" class="form-select form-control-custom">
+                                            <option value="">Select a service...</option>
+                                            <option value="opc">OPC Registration</option>
+                                            <option value="din">DIN & DSC</option>
+                                            <option value="name">Name Approval</option>
+                                            <option value="pan">PAN & TAN</option>
+                                            <option value="bank">Bank Account Guidance</option>
+                                            <option value="compliance">Compliance Support</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label text-dark">Message</label>
+                                        <textarea name="message" rows="4" class="form-control form-control-custom" placeholder="Tell us about your requirements..."></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary-custom w-100 btn-lg">
+                                            Send Message <i class="bi bi-send-fill ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4 class="text-success mb-3"><i class="bi bi-rocket-takeoff-fill me-2"></i>XLRATE</h4>
+                    <p class="opacity-75">Your trusted partner for corporate governance, finance, and credit solutions. Expert guidance from CA, CS & Advocates.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-white opacity-75 hover-opacity-100"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white opacity-75 hover-opacity-100"><i class="bi bi-linkedin fs-4"></i></a>
+                        <a href="#" class="text-white opacity-75 hover-opacity-100"><i class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h6 class="text-white mb-3">Quick Links</h6>
+                    <ul class="list-unstyled opacity-75">
+                        <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white text-decoration-none">Services</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h6 class="text-white mb-3">Services</h6>
+                    <ul class="list-unstyled opacity-75">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">OPC Registration</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">GST Filing</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Compliance</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Legal Advice</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-white mb-3">Business Hours</h6>
+                    <p class="opacity-75 mb-1">Monday - Saturday</p>
+                    <p class="opacity-75 mb-3">10:00 AM - 6:00 PM IST</p>
+                    <div class="alert alert-success bg-success bg-opacity-25 border-0 text-white">
+                        <i class="bi bi-info-circle-fill me-2"></i>
+                        Free consultation for first-time entrepreneurs
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 opacity-75">&copy; 2026 XLRATE Corporate Consultancy LLP. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 opacity-75">Designed with <i class="bi bi-heart-fill text-danger"></i> for Indian Businesses</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917780932614" class="float-whatsapp" target="_blank" title="Chat on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Smooth Scroll -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '<i class="bi bi-check-circle-fill me-2"></i>Sent Successfully!';
+                btn.classList.remove('btn-primary-custom');
+                btn.classList.add('btn-success');
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    btn.classList.remove('btn-success');
+                    btn.classList.add('btn-primary-custom');
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
